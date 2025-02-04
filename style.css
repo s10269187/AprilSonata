@@ -96,7 +96,7 @@ header {
   border: none;
   font-size: 30px;
   color: #000; /* Color of the close button */
-  position: absolute; /* Position it at the top right */
+  position: fixed; /* Position it at the top right */
   top: 20px;
   right: 20px;
   cursor: pointer;
@@ -114,9 +114,9 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Full width */
+  width: 40%; 
   height: 100%; /* Full height */
-  background-color: rgba(244, 230, 188, 0.95); /* Semi-transparent background with specified color */
+  background-color: rgba(247, 234, 210, 1); /* Semi-transparent background with specified color */
   z-index: 1000; /* Ensure it appears above other content */
   flex-direction: column;
   align-items: center;
@@ -147,7 +147,8 @@ header {
 
   .hamburger {
     display: block; /* Show on mobile */
-    z-index: 1001; /* Ensure it appears above other content */
+    position: relative; 
+    z-index: 0; /* Ensure it appears below overlay */
   }
 
   .nav-links li {
