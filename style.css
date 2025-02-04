@@ -76,9 +76,96 @@ header {
   align-items: center; /* Center items vertically */
 }
 
-.nav-links li {
-  margin: 0 15px; /* Space between links */
+
+.nav-logo {
+  height: 50px; /* Adjust height as needed */
 }
+
+.hamburger {
+  display: none; /* Hide on desktop */
+  background: none;
+  border: none;
+  font-size: 30px; /* Size of the hamburger icon */
+  cursor: pointer;
+  color: #000; /* Color of the hamburger icon */
+}
+
+.close-btn {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #000; /* Color of the close button */
+  position: absolute; /* Position it at the top right */
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it appears above nav links */
+}
+
+.nav-links {
+  display: flex; /* Show links in a row on desktop */
+  list-style: none; /* Remove bullet points */
+  margin-left: auto; /* Align to the right */
+}
+
+.overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(244, 230, 188, 0.95); /* Semi-transparent background with specified color */
+  z-index: 1000; /* Ensure it appears above other content */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .nav-logo {
+    position: absolute; /* Center the logo */
+    left: 50%;
+    transform: translateX(-50%); /* Centering */
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default on mobile */
+    flex-direction: column; /* Stack links vertically */
+    position: fixed; /* Fix position for overlay */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(244, 230, 188, 0.95); /* Semi-transparent background with specified color */
+    z-index: 1000; /* Ensure it appears above other content */
+    overflow-y: auto; /* Allow scrolling if needed */
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .hamburger {
+    display: block; /* Show on mobile */
+    z-index: 1001; /* Ensure it appears above other content */
+  }
+
+  .nav-links li {
+    margin: 15px 0; /* Space between links */
+    width: 100%; /* Make links utilize full width */
+    text-align: center; /* Center text */
+  }
+
+  .nav-active {
+    display: flex; /* Show links when active */
+  }
+
+  .close-btn {
+    display: block; /* Show close button when nav is active */
+  }
+}
+
+
 
 /* Navigation Links */
 .nav-links li a {

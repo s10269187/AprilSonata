@@ -42,6 +42,17 @@ setInterval(() => {
   plusSlides(1);
 }, 4000); // Change slide every 3 seconds
 
+
+function toggleMenu() {
+  const navLinks = document.getElementById('nav-links');
+  const overlay = document.getElementById('overlay');
+  const closeButton = document.querySelector('.close-btn');
+  navLinks.classList.toggle('nav-active');
+  overlay.classList.toggle('active');
+  closeButton.style.display = closeButton.style.display === 'none' ? 'block' : 'none'; // Toggle close button
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // What kind of interface we want at the start 
   const APIKEY = "67a0285d70c1ac5876db566f";
