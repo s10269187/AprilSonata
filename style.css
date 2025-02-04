@@ -96,9 +96,9 @@ header {
   border: none;
   font-size: 30px;
   color: #000; /* Color of the close button */
-  position: fixed; /* Position it at the top right */
+  position: fixed; /* Position it at the top left */
   top: 20px;
-  right: 20px;
+  left: 20px;
   cursor: pointer;
   z-index: 1001; /* Ensure it appears above nav links */
 }
@@ -116,7 +116,7 @@ header {
   left: 0;
   width: 40%; 
   height: 100%; /* Full height */
-  background-color: rgba(244, 230, 188, 0.95); /* Semi-transparent background with specified color */
+  background-color: rgba(155, 141, 115, 0.95); /* Semi-transparent background with specified color */
   z-index: 1000; /* Ensure it appears above other content */
   flex-direction: column;
   align-items: center;
