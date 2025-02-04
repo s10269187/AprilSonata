@@ -68,8 +68,8 @@ header {
 }
 
 .navbar {
-  width: 100%; /* Stretch the navbar to full width */
-  background-color: #f4e6bc; /* Change this to your desired background color */
+  width: 100%; /*navbar to full width */
+  background-color:#f7ead2; /* Change this to background color */
   padding: 10px 15px; /* Padding on top/bottom and left/right */
   box-sizing: border-box; /* Ensure padding is included in the total width */
   display: flex; /* Use flexbox for layout */
@@ -116,7 +116,7 @@ header {
   left: 0;
   width: 40%; 
   height: 100%; /* Full height */
-  background-color: rgba(247, 234, 210, 1); /* Semi-transparent background with specified color */
+  background-color: rgba(244, 230, 188, 0.95); /* Semi-transparent background with specified color */
   z-index: 1000; /* Ensure it appears above other content */
   flex-direction: column;
   align-items: center;
