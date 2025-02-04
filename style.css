@@ -201,3 +201,174 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 
+.image-row {
+  display: flex; /* Flexbox layout for side-by-side images */
+  justify-content: space-around; /* Ensures even space between images */
+  margin-top: 10px; /* Adds space above the row */
+}
+
+.image-row img {
+  width: 43%; /* Each image takes up 48% of the container */
+  height: 250px; /* Set a fixed height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  transition: transform 0.4s ease; /* Smooth transition for scaling */
+}
+
+.image-row img:hover {
+  transform: scale(1.1); /* Increase size by 10% on hover */
+}
+
+.icon-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+}
+.card {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.card:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+.text-container h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+}
+.text-container p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: #666;
+}
+@media (max-width: 1024px) {
+  .icon-row {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .icon-row {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Slightly dark background for readability */
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.footer-bottom  {
+  background-color: #414040;
+  color: white;
+  padding: 30px 20px;
+}
+
+.bottom-page {
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.subscribe {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subscribe h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.subscribe-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.subscribe-box input {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.subscribe-box button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.footer-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section {
+  width: 10%;
+}
+
+.section h4 {
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section ul li {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.social-icons span {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 10px;
+  color: #ccc;
+}
