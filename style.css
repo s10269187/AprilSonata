@@ -47,38 +47,63 @@ header {
 
 
 .nav-logo {
-  height: 40px; /* Adjust the height as needed */
+  height: 40px; 
   margin-right: 15px; /* Space between the logo and the nav items */
   vertical-align: middle; /* Aligns the image vertically with the nav items */
 }
 
 .nav-links {
-  display: flex; /* Use flexbox for equal spacing */
-  justify-content: space-between; /* Equal spacing between items */
+  display: flex; 
   list-style-type: none; /* Remove default list styling */
   padding: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
   flex-grow: 1; /* Allow nav-links to grow and take available space */
+  gap: 8px; /* Reduce spacing between items */
 }
 
 .nav-item {
-  padding: 10px; /* Equal padding for each item */
-  font-size: 16px; /* Adjust the font size as needed */
+  padding: 5px; /* Equal padding for each item */
+  font-size: 16px; 
   font-weight: bold;
 }
 
 .navbar {
-  width: 100%; /*navbar to full width */
+  width: 100%; 
   background-color:#f7ead2; /* Change this to background color */
   padding: 10px 15px; /* Padding on top/bottom and left/right */
   box-sizing: border-box; /* Ensure padding is included in the total width */
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Center items vertically */
+  display: flex; 
+  align-items: center; 
 }
 
 
 .nav-logo {
   height: 50px; /* Adjust height as needed */
+}
+
+.profile-icon {
+  height: 60px; 
+  width: 60px; 
+  border-radius: 50%; /* Make it circular */
+  margin-left: 10px; /* Space between icons */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.nav-icons {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  margin-left: auto; /* Push icons to the right */
+}
+
+.nav-icon {
+  height: 30px; /* Adjust height as needed */
+  margin-left: 15px; /* Space between icons */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Ensure icons are always on the right */
+.navbar > .nav-links {
+  margin-left: auto; /* Pushes the nav links to the left */
 }
 
 .hamburger {
@@ -106,7 +131,7 @@ header {
 .nav-links {
   display: flex; /* Show links in a row on desktop */
   list-style: none; /* Remove bullet points */
-  margin-left: auto; /* Align to the right */
+  margin-right: auto; /* Align to the right */
 }
 
 .overlay {
@@ -163,6 +188,10 @@ header {
 
   .close-btn {
     display: block; /* Show close button when nav is active */
+  }
+
+  .nav-links {
+    margin-left: auto; /* Ensure nav links are pushed to the left */
   }
 }
 
