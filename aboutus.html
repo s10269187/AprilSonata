@@ -4,12 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
-    <script src="script.js">
-
-    </script>
-    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js" defer></script>
+    <title>April Sonata</title>
 </head>
+<link rel="icon" type="image/png" href="img/brandlogo.png">
 <body>
-    <div></div>
+    <header>
+        <img src="img/brandlogo.png" alt="Brand Logo" class="nav-logo"> <!-- Logo on the left -->
+        <nav class="navbar">
+          <button class="hamburger" onclick="toggleMenu()">☰</button> <!-- Hamburger button -->
+          <button class="close-btn" style="display:none;" onclick="toggleMenu()">✖</button> <!-- Close button -->
+          <ul class="nav-links" id="nav-links">
+            <li><u><a href="index.html">Home</a></u></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="nav-icons">
+            <a href="likes.html"><img src="img/hearticon.png" alt="Like" class="nav-icon"></a> <!-- Like icon -->
+            <a href="cart.html"><img src="img/carticon.png" alt="Cart" class="nav-icon"></a> <!-- Cart icon -->
+            <a href="profile.html"><img src="img/pfp.png" alt="Profile" class="nav-icon profile-icon"></a> <!-- Profile icon -->
+          </div>
+        </nav>
+      </header>
+
+      <div id="fullScene">
+        <!-- The cover overlay using a CSS mask to create a circular hole -->
+        <div id="cover"></div>
+        <!-- Circular window showing the girl -->
+        <div class="circleWindow" id="circularView">
+          <img
+            src="img/circularwindowsomeone.jpg" alt="Girl Looking Out"class="portraitGirl"id="girlPic" />
+        </div>
+        <!-- Centered text content that fades in as the scenery is revealed -->
+        <div class="sceneryContent">
+          <h1>Scenic Wonders</h1>
+          <p>
+            Discover the breathtaking beauty hidden within. Scroll to unveil the
+            full panorama.
+          </p>
+        </div>
+      </div>
+  
+      <!-- Section 1: Black Background -->
+      <section class="backgroundSection bg-black" id="sectionOne">
+        <div class="detailBlock">
+          <img
+            src="https://via.placeholder.com/200x200?text=Scenery+1"
+            alt="Scenery 1"
+          />
+          <div class="captionBlock">
+            <h2>Midnight View</h2>
+            <p>
+              This scene evokes the mystery of night – dark and full of hidden
+              stories.
+            </p>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Section 2: White Background -->
+      <section class="backgroundSection bg-white" id="sectionTwo">
+        <div class="detailBlock">
+          <img
+            src="https://via.placeholder.com/200x200?text=Scenery+2"
+            alt="Scenery 2"
+          />
+          <div class="captionBlock">
+            <h2>Daylight Panorama</h2>
+            <p>
+              A bright and airy scene that opens up into endless possibilities.
+            </p>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Section 3: Green Background -->
+      <section class="backgroundSection bg-green" id="sectionThree">
+        <div class="detailBlock">
+          <img
+            src="https://via.placeholder.com/200x200?text=Scenery+3"
+            alt="Scenery 3"
+          />
+          <div class="captionBlock">
+            <h2>Nature's Embrace</h2>
+            <p>
+              The calming presence of nature brings a fresh perspective and hope.
+            </p>
+          </div>
+        </div>
+      </section>
 </body>
 </html>

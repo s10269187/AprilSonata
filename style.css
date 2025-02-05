@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 body {
   background-color: rgb(244, 244, 244);
+  font-family: "Playfair Display", serif;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .brown-line {
@@ -47,38 +57,155 @@ header {
 
 
 .nav-logo {
-  height: 40px; /* Adjust the height as needed */
+  height: 40px; 
   margin-right: 15px; /* Space between the logo and the nav items */
   vertical-align: middle; /* Aligns the image vertically with the nav items */
 }
 
 .nav-links {
-  display: flex; /* Use flexbox for equal spacing */
-  justify-content: space-between; /* Equal spacing between items */
+  display: flex; 
   list-style-type: none; /* Remove default list styling */
   padding: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
   flex-grow: 1; /* Allow nav-links to grow and take available space */
+  gap: 8px; /* Reduce spacing between items */
 }
 
 .nav-item {
-  padding: 10px; /* Equal padding for each item */
-  font-size: 16px; /* Adjust the font size as needed */
+  padding: 5px; /* Equal padding for each item */
+  font-size: 16px; 
   font-weight: bold;
 }
 
 .navbar {
-  width: 100%; /* Stretch the navbar to full width */
-  background-color: #f4e6bc; /* Change this to your desired background color */
+  width: 100%; 
+  background-color:#f7ead2; /* Change this to background color */
   padding: 10px 15px; /* Padding on top/bottom and left/right */
   box-sizing: border-box; /* Ensure padding is included in the total width */
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Center items vertically */
+  display: flex; 
+  align-items: center; 
 }
 
-.nav-links li {
-  margin: 0 15px; /* Space between links */
+
+.nav-logo {
+  height: 50px; /* Adjust height as needed */
 }
+
+.profile-icon {
+  height: 60px; 
+  width: 60px; 
+  border-radius: 50%; /* Make it circular */
+  margin-left: 10px; /* Space between icons */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.nav-icons {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  margin-left: auto; /* Push icons to the right */
+}
+
+.nav-icon {
+  height: 30px; /* Adjust height as needed */
+  margin-left: 15px; /* Space between icons */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Ensure icons are always on the right */
+.navbar > .nav-links {
+  margin-left: auto; /* Pushes the nav links to the left */
+}
+
+.hamburger {
+  display: none; /* Hide on desktop */
+  background: none;
+  border: none;
+  font-size: 30px; /* Size of the hamburger icon */
+  cursor: pointer;
+  color: #000; /* Color of the hamburger icon */
+}
+
+.close-btn {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #000; /* Color of the close button */
+  position: fixed; /* Position it at the top left */
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure it appears above nav links */
+}
+
+.nav-links {
+  display: flex; /* Show links in a row on desktop */
+  list-style: none; /* Remove bullet points */
+  margin-right: auto; /* Align to the right */
+}
+
+.overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%; 
+  height: 100%; /* Full height */
+  background-color: rgba(155, 141, 115, 0.95); /* Semi-transparent background with specified color */
+  z-index: 1000; /* Ensure it appears above other content */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .nav-logo {
+    position: absolute; /* Center the logo */
+    left: 50%;
+    transform: translateX(-50%); /* Centering */
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default on mobile */
+    flex-direction: column; /* Stack links vertically */
+    position: fixed; /* Fix position for overlay */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(244, 230, 188, 0.95); /* Semi-transparent background with specified color */
+    z-index: 1000; /* Ensure it appears above other content */
+    overflow-y: auto; /* Allow scrolling if needed */
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  .hamburger {
+    display: block; /* Show on mobile */
+    position: relative; 
+    z-index: 0; /* Ensure it appears below overlay */
+  }
+
+  .nav-links li {
+    margin: 15px 0; /* Space between links */
+    width: 100%; /* Make links utilize full width */
+    text-align: center; /* Center text */
+  }
+
+  .nav-active {
+    display: flex; /* Show links when active */
+  }
+
+  .close-btn {
+    display: block; /* Show close button when nav is active */
+  }
+
+  .nav-links {
+    margin-left: auto; /* Ensure nav links are pushed to the left */
+  }
+}
+
+
 
 /* Navigation Links */
 .nav-links li a {
@@ -94,6 +221,7 @@ header {
 .nav-links li a:hover,
 .nav-links li a.active { /* Keep the color for active link */
   color: #341f09; /* Change colour on hover and for active link */
+  font-weight: bold;
 }
 
 /* Underline Effect */
@@ -181,7 +309,7 @@ img {vertical-align: middle;}
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.dot:hover {
   background-color: #717171;
 }
 
@@ -207,14 +335,19 @@ img {vertical-align: middle;}
   margin-top: 10px; /* Adds space above the row */
 }
 
+.image-row a {
+  width: 43%; /* Same width as images to ensure proper layout */
+}
+
 .image-row img {
-  width: 43%; /* Each image takes up 48% of the container */
+  width: 100%; /* Make the image fill its parent (the <a> tag) */
   height: 250px; /* Set a fixed height */
   object-fit: cover; /* Ensures the image covers the area without distortion */
   transition: transform 0.4s ease; /* Smooth transition for scaling */
+  display: block; /* Removes any extra space below images */
 }
 
-.image-row img:hover {
+.image-row a:hover img {
   transform: scale(1.1); /* Increase size by 10% on hover */
 }
 
@@ -371,4 +504,136 @@ img {vertical-align: middle;}
   margin-top: 20px;
   font-size: 10px;
   color: #ccc;
+}
+
+#fullScene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  /* Background scenery image */
+  background: url("img/itestingahbro.jpg") center/cover no-repeat;
+  margin-top: 60px; /* space for fixed header */
+  overflow: hidden;
+}
+
+/* Cover overlay with a circular mask */
+/* The custom property --holeRadius controls the size of the transparent circle */
+#cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  --holeRadius: 150px;
+  -webkit-mask: radial-gradient(
+    circle var(--holeRadius) at center,
+    transparent 0%,
+    transparent calc(var(--holeRadius) - 10px),
+    black calc(var(--holeRadius) + 10px)
+  );
+  mask: radial-gradient(
+    circle var(--holeRadius) at center,
+    transparent 0%,
+    transparent calc(var(--holeRadius) - 10px),
+    black calc(var(--holeRadius) + 10px)
+  );
+  pointer-events: none;
+}
+
+/* Circular window showing the girl image */
+.circleWindow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform-origin: center center;
+  z-index: 2;
+}
+
+.portraitGirl {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center center;
+}
+
+/* Centered text content (header & description) */
+.sceneryContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  opacity: 0; /* hidden initially */
+  z-index: 3;
+}
+
+.sceneryContent h1 {
+  font-size: 3rem;
+  margin: 0 0 10px;
+}
+
+.sceneryContent p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* ------------------------
+   Background Sections
+--------------------------- */
+.backgroundSection {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detailBlock {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.detailBlock img {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.captionBlock {
+  line-height: 1.4;
+}
+
+.captionBlock h2 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+}
+
+.captionBlock p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.bg-white {
+  background-color: #fff;
+  color: #000;
+}
+
+.bg-green {
+  background-color: #0a0;
 }

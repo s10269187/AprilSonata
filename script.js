@@ -42,6 +42,17 @@ setInterval(() => {
   plusSlides(1);
 }, 4000); // Change slide every 3 seconds
 
+
+function toggleMenu() {
+  const navLinks = document.getElementById('nav-links');
+  const overlay = document.getElementById('overlay');
+  const closeButton = document.querySelector('.close-btn');
+  navLinks.classList.toggle('nav-active');
+  overlay.classList.toggle('active');
+  closeButton.style.display = closeButton.style.display === 'none' ? 'block' : 'none'; // Toggle close button
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // What kind of interface we want at the start 
   const APIKEY = "67a0285d70c1ac5876db566f";
@@ -83,3 +94,42 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });//end click 
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+// (Optional) Stub for toggleMenu functionality
+function toggleMenu() {
+  const navLinks = document.getElementById("nav-links");
+  if (navLinks.style.display === "block") {
+    navLinks.style.display = "none";
+  } else {
+    navLinks.style.display = "block";
+  }
+}
+
+// GSAP Timeline for the fullScene reveal effect
+gsap.timeline({
+  scrollTrigger: {
+    trigger: "#fullScene",
+    start: "top top",
+    end: "+=1500", // Adjust the scroll distance as needed
+    scrub: true,
+    pin: true
+  }
+})
+  // Expand the circular hole in the cover (by animating --holeRadius)
+  .to("#cover", {
+    duration: 1,
+    "--holeRadius": "2000px",
+    ease: "power1.inOut"
+  })
+  // Fade in the centered text content as the background is revealed
+  .to(
+    ".sceneryContent",
+    {
+      opacity: 1,
+      duration: 1,
+      ease: "power1.inOut"
+    },
+    "-=0.5" // Overlap slightly with the cover animation
+  );

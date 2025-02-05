@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="script.js">
     </script>
-    <title>Document</title>
-    
+    <title>April Sonata</title>
   </head>
-  <body>
+
+  <link rel="icon" type="image/png" href="img/brandlogo.png">
+  
+  <body class="playfair-display">
     <div class="brown-line"></div>
       <div class="container">
         <div class="shipping-banner">
@@ -22,18 +21,28 @@
       </div>
     </div>
     
-    <nav>
+    <header>
+      <img src="img/brandlogo.png" alt="Brand Logo" class="nav-logo"> <!-- Logo on the left -->
       <nav class="navbar">
-    <img src="img/brandlogo.png" alt="Brand Logo" class="nav-logo"> <!-- Adjust the path as needed -->
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="login.html"> Products </a></li>  
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="profile.html">Contact</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
+        <button class="hamburger" onclick="toggleMenu()">☰</button> <!-- Hamburger button -->
+        <button class="close-btn" style="display:none;" onclick="toggleMenu()">✖</button> <!-- Close button -->
+        <ul class="nav-links" id="nav-links">
+          <li><u><a href="index.html">Home</a></u></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+          <a href="likes.html"><img src="img/hearticon.png" alt="Like" class="nav-icon"></a> <!-- Like icon -->
+          <a href="cart.html"><img src="img/carticon.png" alt="Cart" class="nav-icon"></a> <!-- Cart icon -->
+          <a href="profile.html"><img src="img/pfp.png" alt="Profile" class="nav-icon profile-icon"></a> <!-- Profile icon -->
+        </div>
+      </nav>
+    </header>
+    
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+     
 
     <div class="slideshow-container">
       <div class="mySlides fade">
@@ -82,8 +91,8 @@
 
     <div class="slideshow-container">
       <div class="image-row">
-          <img src="img/Shopnowviolinpiano.png" alt="Shop here 1">
-          <img src="img/musicsheetbackground.jpg" alt="Quiz image">
+        <a href="product.html"><img src="img/Shopnowviolinpiano.png" alt="Shop here 1"></a>
+        <a href="product.html"><img src="img/quizbg.png" alt="Quiz image"></a>
       </div>
   </div>
 
@@ -93,14 +102,14 @@
             <img src="img/planet-earth.png" alt="earth">
             <div class="text-container">
                 <h3>Sustainability & Ethics</h3>
-                <p>100% cruelty-free made with organic materials.</p>
+                <p>100% cruelty-free made with organic materials</p>
             </div>
         </div>
         <div class="card">
             <img src="img/quavermusic.png" alt="music notes">
             <div class="text-container">
                 <h3>Learn & Grow</h3>
-                <p>Free music lessons and theory for all.</p>
+                <p>Free music lessons and theory for all</p>
             </div>
         </div>
         <div class="card">
@@ -114,7 +123,7 @@
             <img src="img/loveheart.png" alt="heart">
             <div class="text-container">
                 <h3>Giving back</h3>
-                <p>10% of proceeds go to music education & environmental causes.</p>
+                <p>10% of proceeds go to music education & environmental causes</p>
             </div>
         </div>
     </div>
@@ -131,11 +140,12 @@
       </div>
     </div>
 
+
     <div class="slideshow-container">
       <img src="img/contactushmpgthing.jpg" alt="Contact us" class="hero-image">
       <div class="hero-text">Have an enquiry?
         <p>Our replying hours are 9am-1030pm</p>
-        <button>Contact Us</button>
+        <button onclick="window.location.href='contact.html'">Contact Us</button>
       </div> 
   </div>
 
@@ -196,9 +206,9 @@
     </div>
 </div>
 
-    <p>Copyright © 2025, Swee Lee Holdings Pte Ltd</p>
-    <p>56 Neil Road, Singapore 088830</p>
-    <p>support@sweelee.com.sg</p>
+    <p>Copyright © 2025, April Sonata Holdings Pte Ltd</p>
+    <p>56 Clemrnti Road, Singapore 088840</p>
+    <p>support@aprilsonata.com.sg</p>
 </div>
 </div>
 </footer>
