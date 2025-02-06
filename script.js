@@ -54,45 +54,61 @@ function toggleMenu() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  // What kind of interface we want at the start 
   const APIKEY = "67a0285d70c1ac5876db566f";
+  const form = document.getElementById("register");
 
-  //[STEP 1]: Create our submit form listener
-  document.getElementById("submit").addEventListener("click", function (e) {
-    // Prevent default action of the button 
+  form.addEventListener("submit", function (e) {
+    // Check if the form is valid using built-in HTML5 validation
+    if (!form.checkValidity()) {
+      // This will display the browser's validation messages
+      form.reportValidity();
+      e.preventDefault();
+      return;
+    }
+    
+    // Prevent default form submission
     e.preventDefault();
 
-    //[STEP 2]: Let's retrieve form data
-    // For now, we assume all information is valid
-    // You are to do your own data validation
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
+    // Retrieve and trim form data
+    let username = document.getElementById("username").value.trim();
+    let phonenumber = document.getElementById("phonenumber").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let points = document.getElementById("points").value;
 
-    //[STEP 3]: Get form values when the user clicks on send
-    // Adapted from restdb API
+    // Prepare data to be sent
     let jsondata = {
-      "email": email,
-      "password": password
+      username: username,
+      email: email,
+      phonenumber: phonenumber,
+      password: password,
+      points: points
     };
 
-    //[STEP 4]: Create our AJAX settings. Take note of API key
+    // AJAX settings with API key
     let settings = {
-      method: "POST", //[cher] we will use post to send info
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
         "x-apikey": APIKEY,
         "Cache-Control": "no-cache"
       },
-      body: JSON.stringify(jsondata),
-    }
+      body: JSON.stringify(jsondata)
+    };
 
-    //[STEP 5]: Send our AJAX request over to the DB and print response of the RESTDB storage to console.
+    // Send AJAX request to the RESTdb API
     fetch("https://aprilsonata-d713.restdb.io/rest/customer", settings)
       .then(response => response.json())
       .then(data => {
         console.log(data);
+        // Redirect upon successful registration
+        window.location.href = "index.html";
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("There was an error processing your request.");
       });
-  });//end click 
+  });
 });
 
 gsap.registerPlugin(ScrollTrigger);
