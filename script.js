@@ -97,16 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 gsap.registerPlugin(ScrollTrigger);
 
-// (Optional) Stub for toggleMenu functionality
-function toggleMenu() {
-  const navLinks = document.getElementById("nav-links");
-  if (navLinks.style.display === "block") {
-    navLinks.style.display = "none";
-  } else {
-    navLinks.style.display = "block";
-  }
-}
-
 // GSAP Timeline for the fullScene reveal effect
 gsap.timeline({
   scrollTrigger: {

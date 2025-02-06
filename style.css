@@ -164,7 +164,17 @@ header {
     left: 50%;
     transform: translateX(-50%); /* Centering */
   }
+  
+  .nav-icons {
+    display: flex; /* Enables flexbox */
+    justify-content: flex-end; /* Pushes items to the right */
+    align-items: flex-end; /* Vertically centers icons */
+  }
 
+  .nav-icons img {
+      width: auto;
+      margin-left: 5px; /* Space between icons */
+  }
   .nav-links {
     display: none; /* Hide links by default on mobile */
     flex-direction: column; /* Stack links vertically */
@@ -335,19 +345,15 @@ img {vertical-align: middle;}
   margin-top: 10px; /* Adds space above the row */
 }
 
-.image-row a {
-  width: 43%; /* Same width as images to ensure proper layout */
-}
-
 .image-row img {
-  width: 100%; /* Make the image fill its parent (the <a> tag) */
+  width: 48%; /* Make the image fill its parent (the <a> tag) */
   height: 250px; /* Set a fixed height */
   object-fit: cover; /* Ensures the image covers the area without distortion */
   transition: transform 0.4s ease; /* Smooth transition for scaling */
   display: block; /* Removes any extra space below images */
 }
 
-.image-row a:hover img {
+.image-row :hover{
   transform: scale(1.1); /* Increase size by 10% on hover */
 }
 
