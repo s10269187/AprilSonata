@@ -515,7 +515,6 @@ img {vertical-align: middle;}
   position: relative;
   /* Background scenery image */
   background: url("img/itestingahbro.jpg") center/cover no-repeat;
-  margin-top: 60px; /* space for fixed header */
   overflow: hidden;
 }
 
