@@ -513,7 +513,8 @@ img {vertical-align: middle;}
 
 #fullScene {
   position: relative;
-  /* Background scenery image */
+  width: 100vw;
+  height: 100vh;
   background: url("img/itestingahbro.jpg") center/cover no-repeat;
   overflow: hidden;
 }
@@ -583,8 +584,9 @@ img {vertical-align: middle;}
   margin: 0 0 10px;
 }
 
-.sceneryContent p {
-  font-size: 1.2rem;
+.sceneryContent p { 
+  font-size: 20px;
+  font-weight: 300;
   margin: 0;
 }
 
@@ -767,3 +769,78 @@ img {vertical-align: middle;}
 #register button:hover {
   background-color: #4F4A3F;
 }
+
+.quiz-container {
+  text-align: center;
+}
+
+.gray-section {
+  background-color: #d3d3d3;
+  padding: 30px;
+  font-size: 25px;
+}
+
+.start-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 15px 40px; /* Increased padding */
+  border-radius: 50px; /* Slightly larger border-radius for a smoother look */
+  border: 2px solid #5E443E;
+  background-color: white;
+  font-size: 28px; /* Increased font size */
+  color: #5E443E;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.start-btn:hover {
+  background-color: #bbb;
+  transform: scale(1.05);
+}
+
+.start-btn:active {
+  background-color: #999;
+  transform: scale(0.95);
+}
+
+.quiz-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Overlay Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 60%;
+  max-width: 400px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.ansbuttons{
+  display: flex;
+  flex-direction: column;
+}
+

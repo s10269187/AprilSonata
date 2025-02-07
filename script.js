@@ -139,3 +139,28 @@ gsap.timeline({
     },
     "-=0.5" // Overlap slightly with the cover animation
   );
+
+  function openPopup() {
+    document.getElementById("quiz-popup").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("quiz-popup").style.display = "none";
+}
+
+function startquiz(){
+  overlay=document.getElementsByClassName("popup-content")[0]
+  overlay.innerHTML="";
+  question=document.createElement("p") // <p> </p>
+  question.innerHTML="test" // <p> test </p>
+  overlay.appendChild(question)
+  answers=document.createElement("div")
+  answers.className="ansbuttons"
+  answers.innerHTML="<button>Apple</button> <button>2</button> <button>3</button>"
+  overlay.appendChild(answers)
+}
+
+function ans1() {
+
+}
+// answer{"0":Answer, "1":Answer, "2":Answer}
