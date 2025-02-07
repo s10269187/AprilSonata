@@ -207,6 +207,7 @@ header {
 
   .close-btn {
     display: block; /* Show close button when nav is active */
+    
   }
 
   .nav-links {
@@ -590,6 +591,13 @@ img {vertical-align: middle;}
   margin: 0;
 }
 
+.about-us-title, .about-us-content {
+  text-shadow: 1px 1px 0 #4B3D3D, 
+               -1px -1px 0 #4B3D3D,
+               1px -1px 0 #4B3D3D,
+               -1px 1px 0 #4B3D3D;
+}
+
 /* ------------------------
    Background Sections
 --------------------------- */
@@ -844,3 +852,13 @@ img {vertical-align: middle;}
   flex-direction: column;
 }
 
+/* I HAVENT CONTINUE, QUIZ CONT IHEHEHHRHHEHRHHEHRHHER*/
+
+.header-text {
+  text-align: center; /* Center the text */
+  font-size: 24px; /* Increase the font size */
+  margin-top: 20px; /* Add margin at the top */
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: #5E443E;
+}
