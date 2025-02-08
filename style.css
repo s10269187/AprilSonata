@@ -652,7 +652,7 @@ img {vertical-align: middle;}
 /* Header with margin-top */
 .abotuusheader2 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 35px;
   color: #3a4a3a;
   margin-top: 30px;
 }
@@ -678,9 +678,68 @@ img {vertical-align: middle;}
   background: #d9e7d4; /* Light green background like the example */
   padding: 15px;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 20px;
   margin-top: 30px;
   color: #2d3b2d;
+}
+
+/* Green Overlay Section */
+.green-overlay {
+  background-color: #A8C3A4; /* Soft green */
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* Badge Icon on the Left */
+.badge-icon {
+  width: 80px; /* Adjust size */
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Text Container */
+.greenoverlaytextcontainer {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.main-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2D3B2D;
+  margin: 0;
+}
+
+.sub-title {
+  font-size: 1.8rem;
+  color: #2D3B2D;
+  margin-top: 5px;
+}
+
+/* Beige Overlay with Textbox */
+.beige-overlay {
+  background-color: #F4E7D1; /* Beige */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #3A3A3A;
+}
+
+/* Full-width Image */
+.aprilsonatacommitmentimg img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .quiz-image img{
