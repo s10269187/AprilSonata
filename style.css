@@ -598,56 +598,89 @@ img {vertical-align: middle;}
                -1px 1px 0 #4B3D3D;
 }
 
-/* ------------------------
-   Background Sections
---------------------------- */
-.backgroundSection {
+.aboutussection2 {
+  text-align: center;
+}
+
+.black-margin {
+  background-color: black;
+  height: 50px; /* Adjust as needed */
+  width: 100%;
+}
+
+.aboutusimg2 {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+}
+
+.aboutusimg2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.text-content {
+  position: absolute;
+  top: 50%;
+  left: 60%; /* Slightly towards the right */
+  transform: translate(-50%, -50%);
+  text-align: left; /* Align text to the left */
+  color: white;
+}
+
+.text-content h2 {
+  font-size: 35px;
+  margin: 0;
+  font-weight: 700;
+  color: black;
+}
+
+.text-content p {
+  font-size: 23px;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #49433A;
+}
+
+/* Full-width Image */
+.aboutustopimg img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header with margin-top */
+.abotuusheader2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #3a4a3a;
+  margin-top: 30px;
+}
+
+/* Two Images Side by Side */
+.aboutussidebysideimg {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.aboutussidebysideimg img {
+  width: 70%; /* Adjust for spacing */
+  height: auto;
+  border-radius: 5px;
+  display: flex;
   justify-content: center;
 }
 
-.detailBlock {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  max-width: 800px;
-}
-
-.detailBlock img {
-  width: 200px;
-  height: auto;
-  margin-right: 20px;
-}
-
-.captionBlock {
-  line-height: 1.4;
-}
-
-.captionBlock h2 {
-  margin: 0 0 10px;
-  font-size: 2rem;
-}
-
-.captionBlock p {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.bg-black {
-  background-color: #919191;
-}
-
-.bg-white {
-  background-color: #fff;
-  color: #000;
-}
-
-.bg-green {
-  background-color: #0a0;
+/* Overlay Text */
+.aboutusoverlaytext {
+  text-align: center;
+  background: #d9e7d4; /* Light green background like the example */
+  padding: 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 30px;
+  color: #2d3b2d;
 }
 
 .quiz-image img{
