@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="question.js">
+  </script>
+  <title>April Sonata</title>
+</head>
+
+<link rel="icon" type="image/png" href="img/brandlogo.png">
+
+<body class="playfair-display">
+  <header>
+    <img src="img/brandlogo.png" alt="Brand Logo" class="nav-logo"> <!-- Logo on the left -->
+    <nav class="navbar">
+      <button class="hamburger" onclick="toggleMenu()">☰</button> <!-- Hamburger button -->
+      <button class="close-btn" style="display:none;" onclick="toggleMenu()">✖</button> <!-- Close button -->
+      <ul class="nav-links" id="nav-links">
+        <li><u><a href="index.html">Home</a></u></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="likes.html"><img src="img/hearticon.png" alt="Like" class="nav-icon"></a> <!-- Like icon -->
+        <a href="cart.html"><img src="img/carticon.png" alt="Cart" class="nav-icon"></a> <!-- Cart icon -->
+        <a href="profile.html"><img src="img/pfp.png" alt="Profile" class="nav-icon profile-icon"></a>
+        <!-- Profile icon -->
+      </div>
+    </nav>
+  </header>
+
+  <div class="quiz-qns">
+    <h2>What Instrument Suits You?</h2>
+    <p id="qnforquiz">Q1. How do you prefer to play your instrument?</p>
+    <button onclick="selectAnswer('A', 1)">A. Using my hands to press keys or pluck strings</button>
+    <button onclick="selectAnswer('B', 1)">B. Using my hands to hit or strike surfaces</button>
+    <button onclick="selectAnswer('C', 1)">C. Using my mouth to blow air while making minimal hand movements</button>
+    <button onclick="selectAnswer('D', 1)">D. Using both my hands and mouth to actively control the sound</button>
+
+    <p id="qnforquiz">Q2. Do you prefer playing the bass or melody?</p>
+    <button onclick="selectAnswer('A', 2)">A. I love playing the melody—it should stand out</button>
+    <button onclick="selectAnswer('B', 2)">B. I prefer bass—it gives depth and rhythm</button>
+    <button onclick="selectAnswer('C', 2)">C. I like switching between melody and bass</button>
+    <button onclick="selectAnswer('D', 2)">D. I enjoy rhythm more than melody or bass</button>
+
+    <p id="qnforquiz">Q3. What is your budget for an instrument?</p>
+    <button onclick="selectAnswer('A', 3)">A. I prefer something affordable or second-hand</button>
+    <button onclick="selectAnswer('B', 3)">B. I'm willing to invest in a mid-range instrument</button>
+    <button onclick="selectAnswer('C', 3)">C. I don't mind spending more for high quality</button>
+    <button onclick="selectAnswer('D', 3)">D. Budget isn't a concern—I want the best option for me</button>
+
+    <h3 id="result"></h3>
+  </div>
+
+</body>
+
+</html>

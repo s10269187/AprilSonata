@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="style.css"/>
-    <script src="script.js">
+    <script src="script.js" defer></script>
     </script>
     <title>April Sonata</title>
 </head>
@@ -42,56 +42,12 @@
             <p>
                 Not sure which musical instrument suits you best? Take our quick and fun quiz to discover the one that matches your personality, style, and musical goals! Whether you're drawn to the elegance of a violin, the rhythm of a drum, or the versatility of a guitar, this quiz will guide you to your perfect match!
             </p>
-            <button class="start-btn" onclick="openPopup()">Start Now</button>
+            <button class="start-quiz-btn" onclick="window.location.href='questions.html'">Begin Quiz</button>
+
         </div>
         <div class="quiz-image">
             <img src="img/quizsecondpic.jpg" alt="quiz page img">
         </div>
     </div>
-    
-    <div id="quiz-popup" class="popup">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <h2>Welcome to the Quiz!</h2>
-            <p>Answer a few quick questions to find your perfect musical instrument match.</p>
-            <button class="start-quiz-btn" onclick="startquiz()">Begin Quiz</button>
-        </div>
-    </div>
-
-    <!--<section class="questions">
-
-        <div class="questionsandans">
-        <h1 id="qns1">Question 1</h1>
-        <div id="answers">
-            <button onclick="ans1()" id="ans1">Answer 1</button>
-            <button id="ans2">Answer 2</button>
-            <button id="ans3">Answer 3</button>
-            <button id="ans4">Answer 4</button>
-        </div>
-    </div>
-
-    <div class="questionsandans">
-        <h1 id="qns2">Question 2</h1>
-        <div id="answers">
-            <button id="ans1">Answer 1</button>
-            <button id="ans2">Answer 2</button>
-            <button id="ans3">Answer 3</button>
-            <button id="ans4">Answer 4</button>
-        </div>
-    </div>
-
-    <div class="questionsandans">
-        <h1 id="qns3">Question 3</h1>
-        <div id="answers">
-            <button id="ans1">Answer 1</button>
-            <button id="ans2">Answer 2</button>
-            <button id="ans3">Answer 3</button>
-            <button id="ans4">Answer 4</button>
-    </div>
-
-    </section> -->
-    
-
-
 </body>
 </html>

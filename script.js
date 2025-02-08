@@ -52,65 +52,6 @@ function toggleMenu() {
   closeButton.style.display = closeButton.style.display === 'none' ? 'block' : 'none'; // Toggle close button
 }
 
-
-document.addEventListener("DOMContentLoaded", function () {
-  const APIKEY = "67a0285d70c1ac5876db566f";
-  const form = document.getElementById("register");
-
-  form.addEventListener("submit", function (e) {
-    // Check if the form is valid using built-in HTML5 validation
-    if (!form.checkValidity()) {
-      // This will display the browser's validation messages
-      form.reportValidity();
-      e.preventDefault();
-      return;
-    }
-    
-    // Prevent default form submission
-    e.preventDefault();
-
-    // Retrieve and trim form data
-    let username = document.getElementById("username").value.trim();
-    let phonenumber = document.getElementById("phonenumber").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let password = document.getElementById("password").value.trim();
-    let points = document.getElementById("points").value;
-
-    // Prepare data to be sent
-    let jsondata = {
-      username: username,
-      email: email,
-      phonenumber: phonenumber,
-      password: password,
-      points: points
-    };
-
-    // AJAX settings with API key
-    let settings = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-apikey": APIKEY,
-        "Cache-Control": "no-cache"
-      },
-      body: JSON.stringify(jsondata)
-    };
-
-    // Send AJAX request to the RESTdb API
-    fetch("https://aprilsonata-d713.restdb.io/rest/customer", settings)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        // Redirect upon successful registration
-        window.location.href = "index.html";
-      })
-      .catch(error => {
-        console.error("Error:", error);
-        alert("There was an error processing your request.");
-      });
-  });
-});
-
 gsap.registerPlugin(ScrollTrigger);
 
 // GSAP Timeline for the fullScene reveal effect
@@ -139,28 +80,3 @@ gsap.timeline({
     },
     "-=0.5" // Overlap slightly with the cover animation
   );
-
-  function openPopup() {
-    document.getElementById("quiz-popup").style.display = "flex";
-}
-
-function closePopup() {
-    document.getElementById("quiz-popup").style.display = "none";
-}
-
-function startquiz(){
-  overlay=document.getElementsByClassName("popup-content")[0]
-  overlay.innerHTML="";
-  question=document.createElement("p") // <p> </p>
-  question.innerHTML="test" // <p> test </p>
-  overlay.appendChild(question)
-  answers=document.createElement("div")
-  answers.className="ansbuttons"
-  answers.innerHTML="<button>Apple</button> <button>2</button> <button>3</button>"
-  overlay.appendChild(answers)
-}
-
-function ans1() {
-
-}
-// answer{"0":Answer, "1":Answer, "2":Answer}
