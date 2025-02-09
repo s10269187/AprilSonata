@@ -934,11 +934,11 @@ img {vertical-align: middle;}
 }
 
 .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
+  display: block; /* Show when the menu is active */
+  position: fixed; /* Position it at the top left */
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  z-index: 1001; /* Ensure it appears above nav links */
 }
 
 .ansbuttons{
@@ -1147,26 +1147,31 @@ h1 {
 
 /* Style the buttons */
 /* Default button style */
-.btn {
+#myBtnContainer {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  flex-wrap: wrap; /* Allow wrapping */
+}
+
+#myBtnContainer .btn {
+  background-color: #f5f5dc; /* Light beige */
   border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s;
+  color: #4b3d3d; /* Dark brown */
+  font-weight: bold;
 }
 
-/* Add a grey background color on mouse-over */
-.btn:hover,
-.btn:focus { /* Add :focus to retain hover style after click */
-  background-color: #2980b9;
-  color: white; 
+#myBtnContainer .btn:hover {
+  background-color: #dcdcdc; /* Light gray */
 }
 
-/* Add a dark background color to the active button */
-.btn:active {
-  background-color: #1c598a;
-  color: white;
+#myBtnContainer .btn.active {
+  background-color: #f5f5dc; /* Keep it beige when active */
+  color: #4b3d3d; /* Dark brown */
 }
 
 .header-container {
