@@ -1221,3 +1221,60 @@ h1 {
 .productscontent:hover .hover-img {
   opacity: 1;
 }
+
+.paymentsbody {
+  background-color: #f8f1ea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.payment-section {
+  background-color: #f5e6d9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  
+}
+.header {
+  background-color: #d0e4f5;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h3 {
+  margin: 0;
+  color: #5a3e36;
+}
+.card-logos img {
+  height: 25px;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+.form-group {
+  margin: 15px 0;        
+}
+label {
+  display: block;
+  font-size: 14px;
+  color: #5a3e36;
+  margin-bottom: 5px;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #bca39b;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.order-summary {
+  font-family: "Playfair Display", serif;
+  text-align: left;
+  margin-top: 10x;
+  padding: 20px;
+}
