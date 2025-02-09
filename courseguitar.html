@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <link rel="stylesheet" href="style.css"/>
+        <script src="courses.js">
+        </script>
+        <title>April Sonata</title>
+    </head>
+    <link rel="icon" type="image/png" href="img/brandlogo.png">
+    <body class="playfair-display">
+        <header>
+            <img src="img/brandlogo.png" alt="Brand Logo" class="nav-logo"> <!-- Logo on the left -->
+            <nav class="navbar">
+              <button class="hamburger" onclick="toggleMenu()">☰</button> <!-- Hamburger button -->
+              <button class="close-btn" style="display:none;" onclick="toggleMenu()">✖</button> <!-- Close button -->
+              <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><u><a href="courses.html">Courses</a></u></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+              <div class="nav-icons">
+                <a href="likes.html"><img src="img/hearticon.png" alt="Like" class="nav-icon"></a> <!-- Like icon -->
+                <a href="cart.html"><img src="img/carticon.png" alt="Cart" class="nav-icon"></a> <!-- Cart icon -->
+                <a href="profile.html"><img src="img/profilepicture.jpg" alt="Profile" class="nav-icon profile-icon"></a> <!-- Profile icon -->
+              </div>
+            </nav>
+        </header>
+
+        <div class="courseinstru">
+            <a href="courses.html" class="back-buttonss">←</a>
+
+
+            <div class="headerinstrus">
+                <img src="img/guitarcoursesimg.jpg" alt="guitar" class="instrument-img">
+                <h1>Guitar Courses</h1>
+            </div>
+    
+            <p class="subtitleinstru">
+                Start learning now! All you have to do is choose a course below, and we will guide you through effective, fun, and well-structured lessons.
+            </p>
+
+            <div class="grid2x2">
+                <div class="courseinstru-box" onclick="openOverlay('Grade 1')">Grade 1</div>
+                <div class="courseinstru-box" onclick="openOverlay('Grade 2')">Grade 2</div>
+                <div class="courseinstru-box" onclick="openOverlay('Grade 3')">Grade 3</div>
+                <div class="courseinstru-box" onclick="openOverlay('Grade 4')">Grade 4</div>
+            </div>
+        </div>
+    
+        <div id="overlayinstru" class="overlayinstru">
+            <div class="overlayinstru-content">
+                <span class="closeinstru-btn" onclick="closeOverlay()">×</span>
+                <h2 id="overlayinstru-title"></h2>
+                <p> Open Strings and Basic Bowing
+                    Beginners will learn the four open strings (G, D, A, and E) and how to read notes in the treble clef. They will play simple tunes and practise basic rhythms like crotchets, minims, and semibreves. Bowing techniques such as détaché (separate bows) and legato (smooth bowing) will be introduced.</p>
+            </div>
+        </div>
+<body>
+    
+</body>
+</html>
