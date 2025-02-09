@@ -1,81 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-        <link rel="stylesheet" href="style.css"/>
-        <script src="script.js">
-        </script>
-        <title>April Sonata</title>
-      </head>
-      <link rel="icon" type="image/png" href="img/brandlogo.png">
-  
-      <body class="playfair-display">
-        <div class="brown-line"></div>
-          <div class="container">
-            <div class="shipping-banner">
-              <p>Free shipping for orders above $500!</p>
-            </div>
-          </div>
-        </div>
-        
-        <header>
-          <img src="img/brandlogo.png" alt="Brand Logo" class="nav-logo"> 
-          <nav class="navbar">
-            <button class="hamburger" onclick="toggleMenu()">☰</button> 
-            <button class="close-btn" style="display:none;" onclick="toggleMenu()">✖</button> 
-            <ul class="nav-links" id="nav-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="product.html">Products</a></li>
-              <li><a href="courses.html">Courses</a></li>
-              <li><a href="aboutus.html">About Us</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-icons">
-              <a href="cart.html"><img src="img/carticon.png" alt="Cart" class="nav-icon"></a> 
-              <a href="profile.html"><img src="img/profilepicture.jpg" alt="Profile" class="nav-icon profile-icon"></a>
-            </div>
-          </nav>
-        </header>
 
-        <div class="header-container">
-          <h1 class="header-title">Shopping Cart</h1>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="api.js">
+  </script>
+  <title>April Sonata</title>
+</head>
+<link rel="icon" type="image/png" href="img/brandlogo.png">
 
-      <section class="paymentsbody">
-      <div class="payment-section">
-        <div class="header">
-            <h3>Credit Card</h3>
-            <div class="card-logos">
-                <img src="img/visaicon.png" alt="Visa">
-                <img src="img/mastercard-icon-2048x1286-s6y46dfh.png" alt="MasterCard">
-                <img src="img/amexicon.png" alt="Amex">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="card-number">Card Number</label>
-            <input type="text" id="card-number" maxlength="19" placeholder="XXXX XXXX XXXX XXXX" oninput="formatCardNumber(this)">
-        </div>
-        <div class="form-group">
-            <label for="expiration">Expiration Date (MM/YY)</label>
-            <input type="text" id="" maxlength="5" placeholder="MM/YY" oninput="formatExpiration(this)">
-        </div>
-        <div class="form-group">
-            <label for="cvv">CVV (Security Code)</label>
-            <input type="text" id="cvv" maxlength="4" placeholder="CVV">
-        </div>
-        <div class="form-group">
-            <label for="name">Name on Card</label>
-            <input type="text" id="name" placeholder="Full Name">
-        </div>
+<body class="playfair-display">
+  <div class="brown-line"></div>
+  <div class="container">
+    <div class="shipping-banner">
+      <p>Free shipping for orders above $500!</p>
     </div>
-   </section>
+  </div>
+  </div>
 
-   <div class="order-summary">
+  <header>
+    <img src="img/brandlogo.png" alt="Brand Logo" class="nav-logo"> 
+    <nav class="navbar">
+      <button class="hamburger" onclick="toggleMenu()">☰</button> 
+      <button class="close-btn" style="display:none;" onclick="toggleMenu()">✖</button> 
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="cart.html"><img src="img/carticon.png" alt="Cart" class="nav-icon"></a>
+        <a href="profile.html"><img src="img/profilepicture.jpg" alt="Profile" class="nav-icon profile-icon"></a>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="header-container">
+    <h1 class="header-title">Shopping Cart</h1>
+  </div>
+
+  <section class="paymentsbody">
+    <div class="payment-section">
+      <div class="header">
+        <h3>Credit Card</h3>
+        <div class="card-logos">
+          <img src="img/visaicon.png" alt="Visa">
+          <img src="img/mastercard-icon-2048x1286-s6y46dfh.png" alt="MasterCard">
+          <img src="img/amexicon.png" alt="Amex">
+        </div>
+      </div>
+      <form id="payment-form">
+        <div class="form-group">
+          <label for="card-number">Card Number</label>
+          <input type="text" id="card-number" maxlength="19" placeholder="XXXX XXXX XXXX XXXX"
+            oninput="formatCardNumber(this)">
+        </div>
+        <div class="form-group">
+          <label for="expiration">Expiration Date (MM/YY)</label>
+          <input type="text" id="expiration" maxlength="5" placeholder="MM/YY" oninput="formatExpiration(this)">
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV (Security Code)</label>
+          <input type="text" id="cvv" maxlength="4" placeholder="CVV">
+        </div>
+        <div class="form-group">
+          <label for="name">Name on Card</label>
+          <input type="text" id="name" placeholder="Full Name">
+        </div>
+        <button type="submit" id="payment-submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="order-summary">
     <h2>Order Summary</h2>
-</div>
+  </div>
 
 </body>
-</html>
 
+</html>
