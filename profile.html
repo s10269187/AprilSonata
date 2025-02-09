@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="style.css"/>
-    <script src="script.js">
+    <script src="api.js">
     </script>
     <title>April Sonata</title>
     
@@ -13,10 +13,10 @@
 <link rel="icon" type="image/png" href="img/brandlogo.png">
 <body class="playfair-display">
     <header>
-      <img src="img/brandlogo.png" alt="Brand Logo" class="nav-logo"> 
+      <img src="img/brandlogo.png" alt="Brand Logo" class="nav-logo"> <!-- Logo on the left -->
       <nav class="navbar">
-        <button class="hamburger" onclick="toggleMenu()">☰</button> 
-        <button class="close-btn" style="display:none;" onclick="toggleMenu()">✖</button> 
+        <button class="hamburger" onclick="toggleMenu()">☰</button> <!-- Hamburger button -->
+        <button class="close-btn" style="display:none;" onclick="toggleMenu()">✖</button> <!-- Close button -->
         <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="product.html">Products</a></li>
@@ -25,8 +25,9 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-icons">
-          <a href="cart.html"><img src="img/carticon.png" alt="Cart" class="nav-icon"></a> 
-          <a href="profile.html"><img src="img/profilepicture.jpg" alt="Profile" class="nav-icon profile-icon"></a> 
+          <a href="likes.html"><img src="img/hearticon.png" alt="Like" class="nav-icon"></a> <!-- Like icon -->
+          <a href="cart.html"><img src="img/carticon.png" alt="Cart" class="nav-icon"></a> <!-- Cart icon -->
+          <a href="profile.html"><img src="img/profilepicture.jpg" alt="Profile" class="nav-icon profile-icon"></a> <!-- Profile icon -->
         </div>
       </nav>
     </header>
@@ -34,6 +35,6 @@
         <h1 class="header-title">1 point = $1 spent</h1>
     </div>
 
-    <p id="rewardspts"></p>
+    <p id="rewards"></p>
 </body>
 </html>
