@@ -1111,19 +1111,19 @@ h1 {
 }
 
 .productsrow {
-  margin: 8px -16px;
+  margin: 10px -16px;
 }
 
 /* Add padding BETWEEN each column (if you want) */
 .productsrow,
 .productsrow > .column {
-  padding: 20px;
+  padding: 1px;
 }
 
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 33.33%;
+  width: 100%;
   display: none; /* Hide columns by default */
 }
 
@@ -1146,23 +1146,27 @@ h1 {
 }
 
 /* Style the buttons */
+/* Default button style */
 .btn {
   border: none;
   outline: none;
   padding: 12px 16px;
   background-color: white;
   cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Add a grey background color on mouse-over */
-.btn:hover {
-  background-color: #ddd;
+.btn:hover,
+.btn:focus { /* Add :focus to retain hover style after click */
+  background-color: #2980b9;
+  color: white; 
 }
 
 /* Add a dark background color to the active button */
-.btn.active {
-  background-color: #666;
-   color: white;
+.btn:active {
+  background-color: #1c598a;
+  color: white;
 }
 
 .header-container {
