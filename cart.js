@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Get user email from sessionStorage
         const user = JSON.parse(sessionStorage.getItem("user"));
         if (user) {
-            emailInput.value = user.Email; // Store email instead of Full_Name
+            emailInput.value = user.Email; 
         }
 
         form.querySelector(".btn-outline-secondary:first-of-type").addEventListener("click", function () {
@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const userEmail = emailInput.value;
 
 
-            // Check if the item already exists for this user's email
             fetch(`${API_URL}?q={"Name":"${itemName}", "Email":"${userEmail}"}`, {
                 method: "GET",
                 headers: {
@@ -55,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             Quantity: quantity,
                             Price: itemPrice.toFixed(2),
                             Total_Price: totalPrice,
-                            Email: userEmail // Store email instead of User
+                            Email: userEmail 
                         };
 
                         fetch(API_URL, {
@@ -84,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Apply changes to all forms
+
     addEventListenersForModal("add-orders-hammerhead", "quantity", "Name", "Price", "TotalPrice", "Email");
     addEventListenersForModal("add-orders-seahorse", "quantity2", "Name2", "Price2", "TotalPrice2", "Email2");
     addEventListenersForModal("add-orders-dolphin", "quantity3", "Name3", "Price3", "TotalPrice3", "Email3");
