@@ -82,15 +82,4 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
         });
     }
-
-
-    addEventListenersForModal("add-orders-hammerhead", "quantity", "Name", "Price", "TotalPrice", "Email");
-    addEventListenersForModal("add-orders-seahorse", "quantity2", "Name2", "Price2", "TotalPrice2", "Email2");
-    addEventListenersForModal("add-orders-dolphin", "quantity3", "Name3", "Price3", "TotalPrice3", "Email3");
-    addEventListenersForModal("add-orders-whale", "quantity4", "Name4", "Price4", "TotalPrice4", "Email4");
-    addEventListenersForModal("add-orders-turtle", "quantity5", "Name5", "Price5", "TotalPrice5", "Email5");
-    addEventListenersForModal("add-orders-lobster", "quantity6", "Name6", "Price6", "TotalPrice6", "Email6");
-    addEventListenersForModal("add-orders-sardine", "quantity7", "Name7", "Price7", "TotalPrice7", "Email7");
-    addEventListenersForModal("add-orders-otter", "quantity8", "Name8", "Price8", "TotalPrice8", "Email8");
-    addEventListenersForModal("add-orders-crab", "quantity9", "Name9", "Price9", "TotalPrice9", "Email9");
 });

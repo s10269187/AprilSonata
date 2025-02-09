@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let jsondata = {
           "cardnumber": cardnumber,
-          "nameofcard": name,
+          "nameoncard": name,
           "expirydate": expiration,
           "cardcvv": cvv
       };
@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       document.getElementById("payment-submit").disabled = true;
 
-      fetch("https://aprilsonata-d713.restdb.io/rest/cart", settings)
+      fetch("https://aprilsonata-d713.restdb.io/rest/orders", settings)
           .then(response => {
               if (!response.ok) {
                   throw new Error("Network response was not ok");
@@ -202,3 +202,45 @@ document.addEventListener("DOMContentLoaded", function () {
           });
   });
 });
+
+async function submitOrder(event, productName, price) {
+  event.preventDefault(); // Prevent the form from refreshing the page
+
+  let form = event.target;
+  let quantityInput = form.querySelector("input[name='quantity']");
+  let quantity = parseInt(quantityInput.value);
+
+  if (quantity < 1 || isNaN(quantity)) {
+      alert("Please enter a valid quantity.");
+      return;
+  }
+
+  let totalPrice = price * quantity; // Calculate total price
+
+  let cartData = {
+      name: productName,
+      quantity: quantity,
+      price: price,
+      total_price: totalPrice
+  };
+
+  try {
+      let response = await fetch("https://aprilsonata-d713.restdb.io/rest/cart", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json",
+              "x-apikey": "67a0285d70c1ac5876db566f"
+          },
+          body: JSON.stringify(cartData)
+      });
+
+      if (response.ok) {
+          alert(`${productName} added to cart successfully!`);
+          form.reset(); // Clear form after successful submission
+      } else {
+          alert("Error adding item to cart.");
+      }
+  } catch (error) {
+      alert("Request failed: " + error.message);
+  }
+}

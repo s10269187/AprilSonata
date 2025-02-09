@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css"/>
     <script src="products.js">
     </script>
+    <script src="api.js">
+    </script>
     <title>April Sonata</title>
     
   </head>
@@ -48,27 +50,100 @@
     </div>
 
     <div class="productsrow">
-      <!-- piano (3 Images) -->
-       
-      <div class="column piano show"><div class="productscontent"><img src="img/grandpianowhite2FRONT.png" class="default-img"><img src="img/grandpianowhite2SIDE.png" class="hover-img"><h4>CLP-865GP Polished White Clavinova Digital Piano</h4><h4>$890</h4></div></div>
-      
-      <div class="column piano show"><div class="productscontent"><img src="img/clp-865gp_front_1_1.png" class="default-img"><img src="img/clp-865gp_side_1_1.png" class="hover-img"><h4>CLP-895GP BLACK CLAVINOVA DIGITAL PIANO</h4><h4>$1080</h4></div></div>
-      
-      <div class="column piano show"><div class="productscontent"><img src="img/clp-875pe_front_1.png" class="default-img"><img src="img/clp-875pe_side_1.png" class="hover-img"><h4>CLP-875 POLISHED EBONY CLAVINOVA DIGITAL PIANO</h4><h4>$890</h4></div></div>
-      
-        <!-- violin (8 Images) -->
-      <div class="column violin show"><div class="productscontent"><img src="img/Jascha_Heifetz_JH600_Front.jpg" class="default-img"><img src="img/Jascha_Heifetz_JH600_back.jpg" class="hover-img"><h4>Jascha Heifetz JH600</h4><h4>$890</h4></div></div>
-      
-      <div class="column violin show"><div class="productscontent"><img src="img/Franz Werner Virtuoso_Front.jpg" class="default-img"><img src="img/Franz Werner Virtuoso_Back.jpg" class="hover-img"><h4>Franz Werner Virtuoso</h4><h4>$890</h4></div></div>
-      
-      <div class="column violin show"><div class="productscontent"><img src="img/Jascha_Heifetz_JH600_Front.jpg" class="default-img"><img src="images/cars3-hover.jpg" class="hover-img"><h4>Classic</h4><h4>$890</h4></div></div>
-       <!-- guitar (8 Images) -->
-      <div class="column guitar show"><div class="productscontent"><img src="img/revstar_RSS20_Electric Guitar_front.jpg" class="default-img"><img src="img/revstar_RSS20_Electric_Guitar_back.jpg" class="hover-img"><h4>Revstar RSS20 Electric Guitar</h4><h4>$901</h4></div></div>
-      
-      <div class="column guitar show"><div class="productscontent"><img src="img/Ibanez_Artcore AS73G-PBM_Electric Guitar_Front.png" class="default-img"><img src="img/Ibanez_Artcore AS73G-PBM_Electric Guitar_Back.png" class="hover-img"><h4>Ibanez Artcore AS73G-PBM Electric Guitar</h4><h4>$766</h4></div></div>
+      <!-- Piano (3 Images) -->
+      <div class="column piano show">
+          <div class="productscontent">
+              <img src="img/grandpianowhite2FRONT.png" class="default-img">
+              <img src="img/grandpianowhite2SIDE.png" class="hover-img">
+              <h4>CLP-865GP Polished White Clavinova Digital Piano</h4>
+              <h4>$890</h4>
+              <form class="order-form" onsubmit="submitOrder(event, 'CLP-865GP Polished White Clavinova Digital Piano', 890)">
+                  <label>Quantity:</label>
+                  <input type="number" name="quantity" id="quantity" min="1" required>
+                  <input type="hidden" value="0">
+                  <button type="submit">Place Order</button>
+              </form>
+          </div>
+      </div>
   
-    </div>
+      <div class="column piano show">
+          <div class="productscontent">
+              <img src="img/clp-865gp_front_1_1.png" class="default-img">
+              <img src="img/clp-865gp_side_1_1.png" class="hover-img">
+              <h4>CLP-895GP BLACK CLAVINOVA DIGITAL PIANO</h4>
+              <h4>$1080</h4>
+              <form class="order-form" onsubmit="submitOrder(event, 'CLP-895GP BLACK CLAVINOVA DIGITAL PIANO', 1080)">
+                  <label>Quantity:</label>
+                  <input type="number" name="quantity" id="quantity" min="1" required>
+                  <input type="hidden" value="0">
+                  <button type="submit">Place Order</button>
+              </form>
+          </div>
+      </div>
+  
+      <!-- Violin (3 Images) -->
+      <div class="column violin show">
+          <div class="productscontent">
+              <img src="img/Jascha_Heifetz_JH600_Front.jpg" class="default-img">
+              <img src="img/Jascha_Heifetz_JH600_back.jpg" class="hover-img">
+              <h4>Jascha Heifetz JH600</h4>
+              <h4>$890</h4>
+              <form class="order-form" onsubmit="submitOrder(event, 'Jascha Heifetz JH600', 890)">
+                  <label>Quantity:</label>
+                  <input type="number" name="quantity" id="quantity" min="1" required>
+                  <input type="hidden" value="0">
+                  <button type="submit">Place Order</button>
+              </form>
+          </div>
+      </div>
+  
+      <div class="column violin show">
+          <div class="productscontent">
+              <img src="img/Franz Werner Virtuoso_Front.jpg" class="default-img">
+              <img src="img/Franz Werner Virtuoso_Back.jpg" class="hover-img">
+              <h4>Franz Werner Virtuoso</h4>
+              <h4>$890</h4>
+              <form class="order-form" onsubmit="submitOrder(event, 'Franz Werner Virtuoso', 890)">
+                  <label>Quantity:</label>
+                  <input type="number" name="quantity" id="quantity" min="1" required>
+                  <input type="hidden" value="0">
+                  <button type="submit">Place Order</button>
+              </form>
+          </div>
+      </div>
+  
+      <!-- Guitar (2 Images) -->
+      <div class="column guitar show">
+          <div class="productscontent">
+              <img src="img/revstar_RSS20_Electric Guitar_front.jpg" class="default-img">
+              <img src="img/revstar_RSS20_Electric_Guitar_back.jpg" class="hover-img">
+              <h4>Revstar RSS20 Electric Guitar</h4>
+              <h4>$901</h4>
+              <form class="order-form" onsubmit="submitOrder(event, 'Revstar RSS20 Electric Guitar', 901)">
+                  <label>Quantity:</label>
+                  <input type="number" name="quantity" id="quantity" min="1" required>
+                  <input type="hidden" value="0">
+                  <button type="submit">Place Order</button>
+              </form>
+          </div>
+      </div>
+  
+      <div class="column guitar show">
+          <div class="productscontent">
+              <img src="img/Ibanez_Artcore AS73G-PBM_Electric Guitar_Front.png" class="default-img">
+              <img src="img/Ibanez_Artcore AS73G-PBM_Electric Guitar_Back.png" class="hover-img">
+              <h4>Ibanez Artcore AS73G-PBM Electric Guitar</h4>
+              <h4>$766</h4>
+              <form class="order-form" onsubmit="submitOrder(event, 'Ibanez Artcore AS73G-PBM Electric Guitar', 766)">
+                  <label>Quantity:</label>
+                  <input type="number" name="quantity" id="quantity" min="1" required>
+                  <input type="hidden" value="0">
+                  <button type="submit">Place Order</button>
+              </form>
+          </div>
+      </div>
   </div>
+  
     
     
 
