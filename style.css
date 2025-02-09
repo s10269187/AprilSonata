@@ -756,12 +756,12 @@ img {vertical-align: middle;}
 }
 
 .centered-content img {
-  width: 20%; /* Adjust size as needed */
+  width: 20%; 
 }
 
 .centered-content p {
   margin-top:10px;
-  font-weight: bold; /* Makes the text bold */
+  font-weight: bold; 
   font-size: 40px; /* Adjust this value to increase the text size */
   color: rgba(60, 36, 21, 1);
 }
